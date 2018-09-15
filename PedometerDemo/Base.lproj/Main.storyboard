@@ -18,11 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwv-SS-Qrb">
-                                <rect key="frame" x="109" y="29" width="80" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwv-SS-Qrb">
+                                <rect key="frame" x="0.0" y="40" width="375" height="38.5"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="32"/>
+                                <color key="textColor" red="0.96078431372549022" green="0.9137254901960784" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số bước:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-rL-zQw">
+                                <rect key="frame" x="30" y="128.5" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" red="0.12549019607843137" green="0.44313725490196076" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.85882352941176465" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoạt động:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-eO-AKc">
+                                <rect key="frame" x="30" y="199.5" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.46274509803921571" green="0.85882352941176465" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang cập nhật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-gy-Osd">
+                                <rect key="frame" x="138" y="128.5" width="106" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.94117647058823528" green="0.56470588235294117" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoj-Jq-o12">
@@ -35,16 +52,43 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startAndStopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZ0-wp-E40"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đang cập nhật" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbs-Kn-jj2">
+                                <rect key="frame" x="138" y="199.5" width="106" height="19.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                <color key="textColor" red="0.94117647058823528" green="0.56470588235294117" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.70315250880281688" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.22352941176470587" green="0.24313725490196078" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zwv-SS-Qrb" secondAttribute="trailing" id="363-Qv-aFA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yoj-Jq-o12" secondAttribute="trailing" id="4gf-mB-n74"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hbs-Kn-jj2" secondAttribute="trailing" constant="30" id="CbR-S3-9H2"/>
+                            <constraint firstItem="3tI-eO-AKc" firstAttribute="top" secondItem="c2q-rL-zQw" secondAttribute="bottom" constant="50" id="HLU-YH-p6S"/>
+                            <constraint firstItem="Zwv-SS-Qrb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="JyZ-Nb-1so"/>
+                            <constraint firstItem="F9b-gy-Osd" firstAttribute="leading" secondItem="c2q-rL-zQw" secondAttribute="trailing" constant="30" id="MqM-al-LAr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F9b-gy-Osd" secondAttribute="trailing" constant="30" id="Q8k-0J-VpP"/>
                             <constraint firstItem="yoj-Jq-o12" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xrm-xP-cX1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yoj-Jq-o12" secondAttribute="bottom" id="YPS-T9-8cR"/>
+                            <constraint firstItem="Zwv-SS-Qrb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZMN-Av-AsN"/>
+                            <constraint firstItem="F9b-gy-Osd" firstAttribute="top" secondItem="c2q-rL-zQw" secondAttribute="top" id="ZoK-tm-6l0"/>
+                            <constraint firstItem="hbs-Kn-jj2" firstAttribute="leading" secondItem="F9b-gy-Osd" secondAttribute="leading" id="ebq-6J-WMR"/>
+                            <constraint firstItem="3tI-eO-AKc" firstAttribute="leading" secondItem="c2q-rL-zQw" secondAttribute="leading" id="iGj-11-ZRb"/>
+                            <constraint firstItem="c2q-rL-zQw" firstAttribute="top" secondItem="Zwv-SS-Qrb" secondAttribute="bottom" constant="50" id="mGg-5t-drG"/>
+                            <constraint firstItem="hbs-Kn-jj2" firstAttribute="top" secondItem="3tI-eO-AKc" secondAttribute="top" id="wJN-bn-n3H"/>
+                            <constraint firstItem="c2q-rL-zQw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xt3-3D-OUC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityTypeLabel" destination="hbs-Kn-jj2" id="lEG-1c-hYv"/>
+                        <outlet property="startButton" destination="yoj-Jq-o12" id="l3D-Zx-SYS"/>
+                        <outlet property="stepsCountLabel" destination="F9b-gy-Osd" id="EhW-F8-Zz5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
